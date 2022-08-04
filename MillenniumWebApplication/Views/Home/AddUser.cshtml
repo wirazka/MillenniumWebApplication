@@ -1,0 +1,23 @@
+﻿@using MillenniumWebApplication.Models
+@model UserViewModel
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>User</h2>
+
+@using (var form = @Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Nickname, new { style = "margin-right:3px" })
+    @Html.TextBoxFor(m => m.Nickname, new { style = "margin-right:5px" })
+
+    @Html.LabelFor(m => m.EmailAddress, new { style = "margin-right:3px" })
+    @Html.TextBoxFor(m => m.EmailAddress, new { style = "margin-right:5px" })
+    <br />
+    @Html.ValidationMessageFor(m => m.Nickname)
+    @Html.ValidationMessageFor(m => m.EmailAddress)
+
+    <br />
+    <button type="submit">Dodaj</button>
+}
+

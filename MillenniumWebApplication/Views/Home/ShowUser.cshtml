@@ -1,0 +1,14 @@
+﻿@using MillenniumWebApplication.Models
+@model UserViewModel
+@{
+    ViewBag.Title = "User";
+}
+
+<h2>User</h2>
+
+@Html.LabelFor(m => m.Nickname)
+@Html.DisplayFor(m => m.Nickname)
+
+@Html.LabelFor(m => m.EmailAddress)
+@Html.DisplayFor(m => m.EmailAddress)
+
